@@ -33,26 +33,22 @@ var cad = `
             <a class="nav-link" href="about.html">About Us</a>
            <a class="nav-link" href="location.html">Sucursales</a>
             <a class="nav-link" href="form.html">Registrarse</a>
-            <a class="nav-link" href="Productos.html">Productos</a>
+            <a class="nav-link" href="Productos.html">Personajes</a>
         </div>
     </div>
     </nav>
 `
 document.getElementById("idheader").innerHTML = cad
 cad = `
-    <a class="redsoc" href="https://www.twitter.com/hjaca" target="_blank"><i class="fa fa-twitter"
+    <a class="redsoc" href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"
         aria-hidden="true"></i></a>
-    <a class="redsoc" href="https://www.facebook.com/Espirituparrillero-106080937568938" target="_blank"><i class="fa fa-facebook"
+    <a class="redsoc" href="https://rickandmortyapi.com/api/character/?name=rick&status=alive" target="_blank"><i class="fa fa-facebook"
         aria-hidden="true"></i></a>
-    <a class="redsoc" href="https://www.youtube.com/channel/UCxBnGl9qGrPGs65lsfTT3aw" target="_blank"><i class="fa fa-youtube"
+    <a class="redsoc" href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube"
         aria-hidden="true"></i></a>
-    <a class="redsoc" href="https://www.instagram.com/espiritu.parrillero/" target="_blank"><i class="fa fa-instagram"
+    <a class="redsoc" href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"
         aria-hidden="true"></i></a>
-    <a class="redsoc" href="https://www.linkedin.com/in/hhjaca" target="_blank"><i
-        class="fa fa-linkedin" aria-hidden="true"></i></a>
-    <a class="redsoc" href="https://www.linkedin.com/in/hhjaca" target="_blank"><i
-        class="fa fa-linkedin" aria-hidden="true"></i></a>
-    <a class="redsoc" href="https://www.linkedin.com/in/hhjaca" target="_blank"><i
+    <a class="redsoc" href="https://www.linkedin.com" target="_blank"><i
         class="fa fa-linkedin" aria-hidden="true"></i></a>
     <p>Derechos Reservados @2022 </p>  
 `
