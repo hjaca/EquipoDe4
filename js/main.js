@@ -1,38 +1,52 @@
-if (document.getElementById("app")) {
-    const app = new Vue({
-        el: "#app",
-        data: {
-            productos: [],
-            errored: false,
-            loading: true
+const app = new Vue({
+    el: "#app",
+    data: {
+        personajes: [],
+        siguiente: "",
+        anterior: ""
+    },
+    created() {
+        this.fetchData('https://rickandmortyapi.com/api/character/?name=rick&status=alive')
+        //this.fetchData('https://rickandmortyapi.com/api/character/1,2,3,4,5,6
+    },
+    methods: {
+        fetchData(url) {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    this.personajes = data.results;
+                    this.siguiente = data.info.next;
+                    this.anterior = url;
+                })
+                .catch(err => {
+                    console.error(err);
+                })
         },
-        created() {
-            var url = 'http://localhost:5000/productos'
-            this.fetchData(url)
+        siguiente1() {
+
+            fetch(this.siguiente)
+                .then(response => response.json())
+                .then(data => {
+                    this.personajes = data.results;
+                    this.siguiente = data.info.next;
+                    this.anterior = data.info.prev;
+                })
+                .catch(err => {
+                    console.error(err);
+                })
+        
         },
-        methods: {
-            fetchData(url) {
-                fetch(url)
-                    .then(response => response.json())
-                    .then(data => {
-                        this.productos = data;
-                        this.loading = false;
-                    })
-                    .catch(err => {
-                        this.errored = true
-                    })
-            },
-            eliminar(producto) {
-                const url = 'http://localhost:5000/producto/' + producto;
-                var options = {
-                    method: 'DELETE',
-                }
-                fetch(url, options)
-                    .then(res => res.text()) // or res.json()
-                    .then(res => {
-                        location.reload();
-                    })
-            }
+        anterior1() {
+            fetch(this.anterior)
+                .then(response => response.json())
+                .then(data => {
+                    this.personajes = data.results;
+                    this.siguiente = data.info.next;
+                    this.anterior = data.info.prev;
+                })
+                .catch(err => {
+                    console.error(err);
+                })
         }
-    })
-}
+    }
+});

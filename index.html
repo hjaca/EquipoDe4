@@ -18,7 +18,7 @@
   <script src="dist/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
   -->
-  
+
 </head>
 
 <body>
@@ -28,42 +28,38 @@
     <div class="col-md-2 col-sm-2">
       <div class="aside">
         <p>"Proyecto de 4 es una experiencia unica que solo puedes vivirla en cada lugar de nuestra Argentina."</p>
-        <p>"Proyecto de 4 es una experiencia unica que solo puedes vivirla en cada lugar de nuestra Argentina."</p>
-        <p>"Proyecto de 4 es una experiencia unica que solo puedes vivirla en cada lugar de nuestra Argentina."</p>
+        <p>"Este equipo esta participando del programa Codo a Codo"</p>
+        <p>"Este es el 1er TP - Un sitio responsive "</p>
         
       </div>
     </div>
-    <div class="col-md-8 col-sm-10"  id="app">
-      <div id="idcarousel" class="carousel slide" data-ride="carousel">
-        <!-- un indicador por cada imagenes -->
-        <ul class="carousel-indicators"  >
-          <li data-target="#demo" :data-bs-slide-to="i" :class="i==0?'active':''"  v-for="(producto,i) in productos"    ></li>
-        </ul>
-    
-        <!-- The slideshow -->
-        <div class="carousel-inner"    >
-          <div class="carousel-item"  v-for="(producto,i) in productos "   :class="i==0?'active':''"   >
-            <img :src="producto.pic" style="width: 40%; " >
-            <div class="carousel-caption" style="color: black;">
-              <h4>Nombre: {{producto.nombre}}</h4>
-              <p>$ {{producto.precio}}</p>
-            </div>
-          </div>
-        </div>
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-          <span class="carousel-control-prev-icon"   ></span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-          <span class="carousel-control-next-icon"   ></span>
-        </a>
 
+    <div class="col-md-8 col-sm-10"  id="app">
+      <button @click="anterior1()">Anterior</button>
+      <!--   <button @click=" fetchData({{anterior}} .....)">Anterior</button>-->
+      <button @click="siguiente1()">Siguiente</button><br>
+      <div class="d-flex flex-wrap justify-content-center ">
+          <div v-for="personaje in personajes" class="  padding: 5px card m-3" style="width: 200px;">
+              <img :src="personaje.image" class="card-img-top" alt="Card image" style="width:100%">
+              <div class="card-body">
+                  <h4 class="card-title"> {{personaje.name}} </h4>
+                  <p class="card-text">ID: {{personaje.id}}</p>
+                  <p class="card-text">Estado: {{personaje.status}}</p>
+                  <p class="card-text">Género: {{personaje.gender}} </p>
+                  <p class="card-text">Creado: {{personaje.created.substr(0,10)}}</p>
+                  <p class="card-text">Especie: {{personaje.species}} </p>
+                  <!--  <p class="card-text">Origen: {{personaje.origin.name}} </p>-->
+                  <!-- <p class="card-text">Tipo: "{{personaje.type}}" </p>-->
+              </div>
+          </div>
 
       </div>
     </div>
+    
     <div class="col-md-2 col-sm-3">
       <div class="aside">
-        <p>"En este sitio web vas a encontrar una experiencia diferente."</p>
+        <p>"Este es un sitio web de prueba."</p>
+        <p>"Accedemos a una API libre para mostrar personajes"</p>
       </div>
     </div>
     <div class="col-md-12 col-sm-12">
