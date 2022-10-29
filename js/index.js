@@ -33,7 +33,7 @@ var cad = `
             <a class="nav-link" href="about.html">About Us</a>
            <a class="nav-link" href="location.html">Sucursales</a>
             <a class="nav-link" href="form.html">Registrarse</a>
-            <a class="nav-link" href="Productos.html">Personajes</a>
+            <a class="nav-link" href="Personajes.html">Personajes</a>
         </div>
     </div>
     </nav>
