@@ -31,9 +31,8 @@ var cad = `
         <div class="navbar-nav ml-auto">
             <a class="nav-link active" href="index.html"> Home <span class="sr-only">(current)</span>            </a>
             <a class="nav-link" href="about.html">About Us</a>
-           <a class="nav-link" href="location.html">Sucursales</a>
+            <a class="nav-link" href="location.html">Locaciones</a>
             <a class="nav-link" href="form.html">Registrarse</a>
-            <a class="nav-link" href="Personajes.html">Personajes</a>
         </div>
     </div>
     </nav>
